@@ -1,0 +1,22 @@
+<script>
+    let anoAtual = parseInt(prompt("Ano atual:"));
+let n = parseInt(prompt("Quantos usuários?"));
+let velho = 0;
+let novo = 999;
+
+for (let i = 1; i <= n; i++) {
+  let anoNasc = parseInt(prompt("Ano de nascimento:"));
+  let idade = anoAtual - anoNasc;
+  document.write("Idade do usuário: " + idade + "<br>");
+
+  if (idade > velho) {
+    velho = idade;
+  }
+  if (idade < novo) {
+    novo = idade;
+  }
+}
+
+document.write("Idade do mais velho: " + velho + "<br>");
+document.write("Idade do mais novo: " + novo + "<br>");
+</script>
