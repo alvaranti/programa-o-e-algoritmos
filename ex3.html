@@ -1,0 +1,15 @@
+<script>
+    let n = parseInt(prompt("Digite a quantidade de termos"));
+let anterior = 0;
+let atual = 1;
+let proximo;
+let termo = 1;
+
+do {
+  document.write(atual + " ");
+  proximo = anterior + atual;
+  anterior = atual;
+  atual = proximo;
+  termo = termo + 1;
+} while (termo <= n);
+</script>

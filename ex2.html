@@ -1,0 +1,14 @@
+<script>
+    let base = parseFloat(prompt("Digite a base:"));
+let expoente = parseInt(prompt("Digite o expoente (inteiro, 1 ou maior):"));
+let potencia = 1;
+let contador = 1;
+
+do {
+  potencia = potencia * base;
+  contador = contador + 1;
+} while (contador <= expoente);
+
+document.write(base + " elevado a " + expoente + " = " + potencia + "<br>");
+
+</script>
