@@ -1,11 +1,14 @@
 <script>
-    let numero = 1;
-let soma = 0;
+    let vetorA = [];
+    let soma = 0;
+    for (let i = 0; i < 10; i++) {
+        vetorA[i] = parseInt(prompt("Entre com o " + (i+1) + "o. valor de A:"));
+        soma = soma + vetorA[i];
+    }
 
-do {
-  soma = soma + numero;
-  numero = numero + 2;
-} while (numero <= 1000);
+    let media = soma / 10;
 
-document.write("Somatoria = " + soma + "<br>");
+    document.write("Vetor A: ", vetorA + "<br><br>");
+    document.write("Soma: ", soma + "<br><br>");
+    document.write("Média: ", media);
 </script>

@@ -1,14 +1,20 @@
 <script>
-    let base = parseFloat(prompt("Digite a base:"));
-let expoente = parseInt(prompt("Digite o expoente (inteiro, 1 ou maior):"));
-let potencia = 1;
-let contador = 1;
+    let vetorA = [];
+    for (let i = 0; i < 10; i++) {
+        vetorA[i] = parseInt(prompt("Entre com o " + (i+1) + "o. valor de A:"));
+    }
 
-do {
-  potencia = potencia * base;
-  contador = contador + 1;
-} while (contador <= expoente);
+    let vetorB = [];
+    for (let i = 0; i < 10; i++) {
+        vetorB[i] = parseInt(prompt("Entre com o " + (i+1) + "o. valor de B:"));
+    }
 
-document.write(base + " elevado a " + expoente + " = " + potencia + "<br>");
+    let vetorC = [];
+    for (let i = 0; i < 10; i++) {
+        vetorC[i] = vetorA[i] + vetorB[i];
+    }
 
+    document.write("Vetor A: ", vetorA + "<br><br>");
+    document.write("Vetor B: ", vetorB + "<br><br>");
+    document.write("Vetor C (Soma): ", vetorC);
 </script>

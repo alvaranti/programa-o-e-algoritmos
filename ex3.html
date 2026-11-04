@@ -1,15 +1,14 @@
 <script>
-    let n = parseInt(prompt("Digite a quantidade de termos"));
-let anterior = 0;
-let atual = 1;
-let proximo;
-let termo = 1;
+    let vetorA = [];
+    for (let i = 0; i < 10; i++) {
+        vetorA[i] = parseInt(prompt("Entre com o " + (i+1) + "o. valor de A:"));
+    }
 
-do {
-  document.write(atual + " ");
-  proximo = anterior + atual;
-  anterior = atual;
-  atual = proximo;
-  termo = termo + 1;
-} while (termo <= n);
+    let vetorB = [];
+    for (let i = 0; i < 10; i++) {
+        vetorB[i] = vetorA[9 - i];
+    }
+
+    document.write("Vetor A: ", vetorA + "<br><br>");
+    document.write("Vetor B (invertido): ", vetorB);
 </script>

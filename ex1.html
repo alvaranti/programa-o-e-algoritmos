@@ -1,12 +1,14 @@
 <script>
-    let numero = parseInt(prompt("Digite um número inteiro para calcular o fatorial:"));
-let fatorial = 1;
-let i = 1;
+    let vetorA = [];
+    for (let i = 0; i < 10; i++) {
+        vetorA[i] = parseInt(prompt("Entre com o " + (i+1) + "o. valor de A:"));
+    }
 
-do {
-  fatorial = fatorial * i;
-  i = i + 1;
-} while (i <= numero);
+    let vetorB = [];
+    for (let i = 0; i < 10; i++) {
+        vetorB[i] = vetorA[i] * vetorA[i];
+    }
 
-document.write(numero + "! = " + fatorial + "<br>");
+    document.write("Vetor A: ", vetorA + "<br><br>");
+    document.write("Vetor B (quadrados): ", vetorB);
 </script>
